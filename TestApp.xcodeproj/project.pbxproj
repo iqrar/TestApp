@@ -15,7 +15,6 @@
 		5FC310931A5C2964004E8423 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FC310911A5C2964004E8423 /* LaunchScreen.xib */; };
 		5FC3109F1A5C2964004E8423 /* TestAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC3109E1A5C2964004E8423 /* TestAppTests.swift */; };
 		5FC310A91A5C2C96004E8423 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC310A81A5C2C96004E8423 /* Data.swift */; };
-		5FC310AD1A5C325A004E8423 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC310AC1A5C325A004E8423 /* MasterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,7 +29,7 @@
 
 /* Begin PBXFileReference section */
 		5FB7DE021A5C3F2200FF5530 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
-		5FB7DE061A5C491A00FF5530 /* AboutCanadaTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutCanadaTableViewController.swift; sourceTree = "<group>"; };
+		5FB7DE061A5C491A00FF5530 /* AboutCanadaTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AboutCanadaTableViewController.swift; path = ../AboutCanadaTableViewController.swift; sourceTree = "<group>"; };
 		5FC310831A5C2964004E8423 /* TestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FC310871A5C2964004E8423 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5FC310881A5C2964004E8423 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -41,7 +40,6 @@
 		5FC3109D1A5C2964004E8423 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5FC3109E1A5C2964004E8423 /* TestAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAppTests.swift; sourceTree = "<group>"; };
 		5FC310A81A5C2C96004E8423 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Data.swift; path = ../Data.swift; sourceTree = "<group>"; };
-		5FC310AC1A5C325A004E8423 /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MasterViewController.swift; path = ../MasterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +63,6 @@
 		5FC3107A1A5C2964004E8423 = {
 			isa = PBXGroup;
 			children = (
-				5FB7DE061A5C491A00FF5530 /* AboutCanadaTableViewController.swift */,
 				5FC310851A5C2964004E8423 /* TestApp */,
 				5FC3109B1A5C2964004E8423 /* TestAppTests */,
 				5FC310841A5C2964004E8423 /* Products */,
@@ -88,7 +85,7 @@
 				5FC3108C1A5C2964004E8423 /* Main.storyboard */,
 				5FC3108F1A5C2964004E8423 /* Images.xcassets */,
 				5FC310911A5C2964004E8423 /* LaunchScreen.xib */,
-				5FC310AC1A5C325A004E8423 /* MasterViewController.swift */,
+				5FB7DE061A5C491A00FF5530 /* AboutCanadaTableViewController.swift */,
 				5FB7DE021A5C3F2200FF5530 /* TableViewCell.swift */,
 				5FC310A81A5C2C96004E8423 /* Data.swift */,
 				5FC310861A5C2964004E8423 /* Supporting Files */,
@@ -225,7 +222,6 @@
 				5FB7DE071A5C491A00FF5530 /* AboutCanadaTableViewController.swift in Sources */,
 				5FC310891A5C2964004E8423 /* AppDelegate.swift in Sources */,
 				5FC310A91A5C2C96004E8423 /* Data.swift in Sources */,
-				5FC310AD1A5C325A004E8423 /* MasterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

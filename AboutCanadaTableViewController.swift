@@ -15,8 +15,10 @@ class AboutCanadaTableViewController: UITableViewController {
     var resultC : Data!
 
     override func viewDidLoad() {
+        
         super.viewDidLoad()
-
+        
+        // To Display Row It s Own Contents
         self.tableView.estimatedRowHeight = 100.0;
         self.tableView.rowHeight = UITableViewAutomaticDimension;
         
@@ -59,12 +61,17 @@ class AboutCanadaTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as TableViewCell
         
+        //Title updated from jSON 
+        self.navigationItem.title = results[indexPath.row].name
+        
         // Configure the cell...
         cell.titleLabel.text = results[indexPath.row].name
         cell.desplabel.text = results[indexPath.row].des
         cell.titleLabel.textColor = UIColor.blueColor()
         
+        //Loads the images lazily
         dispatch_async(dispatch_get_main_queue(), {
+            
             if let imgURL: NSURL = NSURL(string: self.results[indexPath.row].hrefString){
                 
                 // Download an NSData representation of the image at the URL
@@ -80,7 +87,8 @@ class AboutCanadaTableViewController: UITableViewController {
     }
     
     func getResults() {
-        let urlString = "https://api.myjson.com/bins/4ll2f"
+        
+        let urlString = "https://api.myjson.com/bins/42be7"
         let url = NSURL(string: urlString)!
         let urlSession = NSURLSession.sharedSession()
         let task = urlSession.dataTaskWithURL(url, completionHandler: { (data, response, error) -> Void in
@@ -98,9 +106,7 @@ class AboutCanadaTableViewController: UITableViewController {
                 self.refreshControl?.endRefreshing()
             })
             
-            
-            
-        })
+            })
         
         task.resume()
     }
@@ -114,7 +120,6 @@ class AboutCanadaTableViewController: UITableViewController {
         
         
         let title  = jsonData?["title"]  as String
-        println(title)
         titArray.append(title)
         println(titArray[0])
         

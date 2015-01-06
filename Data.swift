@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Loan {
+class Data {
     
     var name:String = ""
     var des:String = ""

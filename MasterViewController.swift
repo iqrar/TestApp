@@ -10,9 +10,9 @@ import UIKit
 
 class MasterViewController: UITableViewController {
 
-    var loans = [Loan]()
+    var results = [Data]()
     var titArray = [String]()
-    var loanC : Loan!
+    var loanC : Data!
     var struck = "iqrar"
     
     override func viewDidLoad() {
@@ -20,6 +20,7 @@ class MasterViewController: UITableViewController {
         
         self.tableView.estimatedRowHeight = 100.0;
         self.tableView.rowHeight = UITableViewAutomaticDimension;
+        
         // Pull To Refresh Control
         refreshControl = UIRefreshControl()
         refreshControl?.backgroundColor = UIColor.whiteColor()
@@ -55,31 +56,29 @@ class MasterViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // Return the number of rows in the section.
-        return loans.count
+        return results.count
     }
     
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as MasterTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as TableViewCell
         
         // Configure the cell...
-        cell.titleLabel.text = loans[indexPath.row].name
-        cell.desplabel.text = loans[indexPath.row].des
-        cell.titleLabel.textColor = UIColor.blueColor()
-        //cell.imageView?.image = UIImage(named:"check2")
-        dispatch_async(dispatch_get_main_queue(), {
-            if let imgURL: NSURL = NSURL(string: self.loans[indexPath.row].hrefString){
+            cell.titleLabel.text = results[indexPath.row].name
+            cell.desplabel.text = results[indexPath.row].des
+            cell.titleLabel.textColor = UIColor.blueColor()
+        
+         dispatch_async(dispatch_get_main_queue(), {
+            if let imgURL: NSURL = NSURL(string: self.results[indexPath.row].hrefString){
                 
                 // Download an NSData representation of the image at the URL
                 if let imgData = NSData(contentsOfURL: imgURL){
                     cell.rightImage?.image = UIImage(data: imgData)
-                    //cell.imageView?.center = CGPointMake (30.0, 20.0);
+                    
                 }
-                //cell.rightImage?.center = CGPointMake(cell.contentView.bounds.size.width/2,cell.contentView.bounds.size.height/2);
+                
             }
         })
-        
-        
         
         return cell
     }
@@ -95,7 +94,7 @@ class MasterViewController: UITableViewController {
             }
             
             // Parse JSON data
-            self.loans = self.parseJsonData(data)
+            self.results = self.parseJsonData(data)
             
             // Reload table view
             dispatch_async(dispatch_get_main_queue(), {
@@ -110,9 +109,9 @@ class MasterViewController: UITableViewController {
         task.resume()
     }
     
-    func parseJsonData(data: NSData) -> [Loan] {
-        var loans = [Loan]()
-        println(loans)
+    func parseJsonData(data: NSData) -> [Data] {
+        
+        var results = [Data]()
         var error:NSError?
         
         let jsonResult = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &error) as? NSDictionary
@@ -137,26 +136,18 @@ class MasterViewController: UITableViewController {
                     if let des = jsonLoan[ "description"] as? String{
                         
                         if let hrefString = jsonLoan[ "imageHref" ] as? String{
-                            let loan = Loan(name:name, des:des, hrefString:hrefString)
-                            loans.append(loan)
+                            let result = Data(name:name, des:des, hrefString:hrefString)
+                            results.append(result)
                         }
                     }
                 }
             }
             
         }
-        //println(loans)
-        return loans
+    
+        return results
         
     }
     
-    /*
-    // MARK: - Navigation
-    
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-    }
-    */
+   
 }

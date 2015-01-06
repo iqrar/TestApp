@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5FB7DE031A5C3F2200FF5530 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB7DE021A5C3F2200FF5530 /* TableViewCell.swift */; };
+		5FB7DE071A5C491A00FF5530 /* AboutCanadaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB7DE061A5C491A00FF5530 /* AboutCanadaTableViewController.swift */; };
 		5FC310891A5C2964004E8423 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC310881A5C2964004E8423 /* AppDelegate.swift */; };
 		5FC3108E1A5C2964004E8423 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FC3108C1A5C2964004E8423 /* Main.storyboard */; };
 		5FC310901A5C2964004E8423 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FC3108F1A5C2964004E8423 /* Images.xcassets */; };
@@ -29,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		5FB7DE021A5C3F2200FF5530 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		5FB7DE061A5C491A00FF5530 /* AboutCanadaTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutCanadaTableViewController.swift; sourceTree = "<group>"; };
 		5FC310831A5C2964004E8423 /* TestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FC310871A5C2964004E8423 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5FC310881A5C2964004E8423 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 		5FC3107A1A5C2964004E8423 = {
 			isa = PBXGroup;
 			children = (
+				5FB7DE061A5C491A00FF5530 /* AboutCanadaTableViewController.swift */,
 				5FC310851A5C2964004E8423 /* TestApp */,
 				5FC3109B1A5C2964004E8423 /* TestAppTests */,
 				5FC310841A5C2964004E8423 /* Products */,
@@ -219,6 +222,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5FB7DE031A5C3F2200FF5530 /* TableViewCell.swift in Sources */,
+				5FB7DE071A5C491A00FF5530 /* AboutCanadaTableViewController.swift in Sources */,
 				5FC310891A5C2964004E8423 /* AppDelegate.swift in Sources */,
 				5FC310A91A5C2C96004E8423 /* Data.swift in Sources */,
 				5FC310AD1A5C325A004E8423 /* MasterViewController.swift in Sources */,

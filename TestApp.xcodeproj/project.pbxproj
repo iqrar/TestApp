@@ -13,6 +13,8 @@
 		5FC310931A5C2964004E8423 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FC310911A5C2964004E8423 /* LaunchScreen.xib */; };
 		5FC3109F1A5C2964004E8423 /* TestAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC3109E1A5C2964004E8423 /* TestAppTests.swift */; };
 		5FC310A91A5C2C96004E8423 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC310A81A5C2C96004E8423 /* Data.swift */; };
+		5FC310AD1A5C325A004E8423 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC310AC1A5C325A004E8423 /* MasterViewController.swift */; };
+		5FC310AF1A5C3450004E8423 /* MasterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC310AE1A5C3450004E8423 /* MasterTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		5FC3109D1A5C2964004E8423 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5FC3109E1A5C2964004E8423 /* TestAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAppTests.swift; sourceTree = "<group>"; };
 		5FC310A81A5C2C96004E8423 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Data.swift; path = ../Data.swift; sourceTree = "<group>"; };
+		5FC310AC1A5C325A004E8423 /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MasterViewController.swift; path = ../MasterViewController.swift; sourceTree = "<group>"; };
+		5FC310AE1A5C3450004E8423 /* MasterTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MasterTableViewCell.swift; path = ../MasterTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,8 @@
 				5FC3108C1A5C2964004E8423 /* Main.storyboard */,
 				5FC3108F1A5C2964004E8423 /* Images.xcassets */,
 				5FC310911A5C2964004E8423 /* LaunchScreen.xib */,
+				5FC310AC1A5C325A004E8423 /* MasterViewController.swift */,
+				5FC310AE1A5C3450004E8423 /* MasterTableViewCell.swift */,
 				5FC310A81A5C2C96004E8423 /* Data.swift */,
 				5FC310861A5C2964004E8423 /* Supporting Files */,
 			);
@@ -214,6 +220,8 @@
 			files = (
 				5FC310891A5C2964004E8423 /* AppDelegate.swift in Sources */,
 				5FC310A91A5C2C96004E8423 /* Data.swift in Sources */,
+				5FC310AD1A5C325A004E8423 /* MasterViewController.swift in Sources */,
+				5FC310AF1A5C3450004E8423 /* MasterTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

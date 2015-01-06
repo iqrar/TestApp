@@ -7,3 +7,15 @@
 //
 
 import Foundation
+
+class Loan {
+    var name:String = ""
+    var des:String = ""
+    var hrefString: String = ""
+    var title:String = ""
+    init(name:String, des:String, hrefString:String){
+        self.name = name
+        self.des = des
+        self.hrefString = hrefString
+    }
+}

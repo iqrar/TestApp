@@ -11,14 +11,12 @@ import UIKit
 class AboutCanadaTableViewController: UITableViewController {
     
     var results = [Data]()
-    var titArray = [String]()
-    var resultC : Data!
-
-    override func viewDidLoad() {
+    
+   override func viewDidLoad() {
         
         super.viewDidLoad()
         
-        // To Display Row It s Own Contents
+        // To Display Row It's Own Contents
         self.tableView.estimatedRowHeight = 100.0;
         self.tableView.rowHeight = UITableViewAutomaticDimension;
         
@@ -35,18 +33,7 @@ class AboutCanadaTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        if titArray.isEmpty {
-            println("empty")
-            
-        }else{
-            self.navigationItem.title = self.titArray[0]
-        }
-        
-    }
-    
+ 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // Return the number of sections.
         return 1
@@ -117,11 +104,6 @@ class AboutCanadaTableViewController: UITableViewController {
         var error:NSError?
         
         let jsonData = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &error) as? NSDictionary
-        
-        
-        let title  = jsonData?["title"]  as String
-        titArray.append(title)
-        println(titArray[0])
         
         // Return nil if there is any error
         if error != nil {

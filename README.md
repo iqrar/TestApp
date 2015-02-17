@@ -4,7 +4,7 @@ Specification
 
 Create an iPhone app which:
 
-	•	Ingests a json feed from https://dl.dropboxusercontent.com/u/746330/facts.json 
+	•	Ingests a json feed from 
 	•	The touchJSON library can be used to parse this json if desired.
 	•	The feed contains a title and a list of rows
 

@@ -4,7 +4,7 @@ Specification
 
 Create an iPhone app which:
 
-	•	Ingests a json feed from 
+	•	Ingests a json feed from https://api.myjson.com/bins/42be7
 	•	The touchJSON library can be used to parse this json if desired.
 	•	The feed contains a title and a list of rows
 
